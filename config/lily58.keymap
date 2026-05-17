@@ -113,6 +113,20 @@
             tapping-term-ms = <350>;
             flavor = "tap-preferred";
         };
+
+        dblTap_toL2: dblTap_toL2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DBLTAP_TOL2";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&to 2>;
+        };
+
+        dblTap_toL3: dblTap_toL3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DBLTAP_TOL3";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&to 3>;
+        };
     };
 
     keymap {
@@ -131,7 +145,7 @@
 &kp ESC    &dblTap_      &kp F3           &kp F4           &kp F5                  &kp F6                                &kp F7  &kp F8         &kp F9            &kp F10         &none                &LongPress_gen DELETE LC(DELETE)
 &kp TAB    &kp Q         &kp W            &kp E            &kp R                   &kp T                                 &kp Y   &kp U          &kp I             &kp O           &kp P                &LongPress_gen BACKSPACE LC(BACKSPACE)
 &kp LCTRL  &hml LCTRL A  &hml LEFT_WIN S  &hml LEFT_ALT D  &hml_shft LEFT_SHIFT F  &kp G                                 &kp H   &hmr_shft J J  &hmr RIGHT_ALT K  &kp L           &hmr RCTRL UP_ARROW  &kp RET
-&kp LSHFT  &kp Z         &kp X            &kp C            &kp V                   &kp B   &kp LBKT     &kp RBKT         &kp N   &kp M          &kp COMMA         &dblTap_period  &kp DOWN_ARROW       &kp RIGHT_ARROW
+&none      &kp Z         &dblTap_toL2     &dblTap_toL3     &kp V                   &kp B   &kp LBKT     &kp RBKT         &kp N   &kp M          &kp COMMA         &dblTap_period  &kp DOWN_ARROW       &kp RIGHT_ARROW
                                           &none            &none                   &mo 1   &kp SPACE    &layer_toggle 1  &mo 2   &none          &none
             >;
 
@@ -184,14 +198,14 @@
 
         extra_3 { status = "reserved"; };
 
-        layer_6 {
+        layer_7 {
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1        &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q         &kp W   &kp E     &kp R     &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &hml LCTRL A  &kp S   &kp D     &kp F     &kp G                          &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z         &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                 &kp LALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RGUI
+&kp ESC    &dblTap_      &kp F3           &kp F4           &kp F5                  &kp F6                                &kp F7  &kp F8         &kp F9            &kp F10         &none                &LongPress_gen DELETE LC(DELETE)
+&kp TAB    &kp Q         &kp W            &kp E            &kp R                   &kp T                                 &kp Y   &kp U          &kp I             &kp O           &kp P                &LongPress_gen BACKSPACE LC(BACKSPACE)
+&kp LCTRL  &hml LCTRL A  &hml LEFT_WIN S  &hml LEFT_ALT D  &hml_shft LEFT_SHIFT F  &kp G                                 &kp H   &hmr_shft J J  &hmr RIGHT_ALT K  &kp L           &hmr RCTRL UP_ARROW  &kp RET
+&none      &kp Z         &kp X            &kp C            &kp V                   &kp B   &kp LBKT     &kp RBKT         &kp N   &kp M          &kp COMMA         &dblTap_period  &kp DOWN_ARROW       &kp RIGHT_ARROW
+                                          &none            &none                   &mo 1   &kp SPACE    &layer_toggle 1  &mo 2   &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
