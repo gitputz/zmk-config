@@ -86,6 +86,23 @@
             #binding-cells = <0>;
             bindings = <&kp END>, <&kp PAGE_DOWN>;
         };
+
+        dblTap_: dblTap__ {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DBLTAP_@";
+            #binding-cells = <0>;
+            bindings = <&kp F2>, <&kp AT_SIGN>;
+        };
+
+        LongPress_gen: LongPress_gen {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LONGPRESS_GEN";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
