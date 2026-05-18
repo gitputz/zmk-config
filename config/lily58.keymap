@@ -161,7 +161,7 @@
         };
 
         layer_1 {
-            display-name = "L1";
+            display-name = "Nav";
             bindings = <
 &none  &dblTap_             &none             &none                   &none                   &none                                &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &dblTap_pgup   &dblTap_pgdn             &LongPress_gen DELETE LC(DELETE)
 &none  &kp N7               &kp N8            &kp N9                  &kp N0                  &mkp LCLK                            &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp MINUS      &kp EQUAL                &LongPress_gen BACKSPACE LC(BACKSPACE)
