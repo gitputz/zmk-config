@@ -154,7 +154,7 @@
 &kp TAB    &kp Q         &kp W            &kp E            &kp R                   &kp T                                    &kp Y   &kp U          &kp I             &kp O           &kp P                &LongPress_gen BACKSPACE LC(BACKSPACE)
 &kp LCTRL  &hml LCTRL A  &hml LEFT_WIN S  &hml LEFT_ALT D  &hml_shft LEFT_SHIFT F  &kp G                                    &kp H   &hmr_shft J J  &hmr RIGHT_ALT K  &kp L           &hmr RCTRL UP_ARROW  &kp RET
 &none      &kp Z         &dblTap_toL2     &dblTap_toL3     &kp V                   &kp B   &dblTap_toL0    &kp RBKT         &kp N   &kp M          &kp COMMA         &dblTap_period  &kp DOWN_ARROW       &kp RIGHT_ARROW
-                                          &none            &none                   &mo 2   &kp SPACE       &layer_toggle 2  &mo 3   &none          &none
+                                          &none            &none                   &mo 2   &kp SPACE       &layer_toggle 1  &mo 3   &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -163,17 +163,17 @@
         layer_1 {
             display-name = "L1";
             bindings = <
-&trans     &dblTap_             &trans            &trans                  &none                   &none                                       &none           &msc SCRL_UP    &none            &dblTap_pgup   &dblTap_pgdn             &LongPress_gen DELETE LC(DELETE)
-&kp TAB    &kp N7               &kp N8            &kp N9                  &kp N0                  &mkp LCLK                                   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp O          &kp P                    &LongPress_gen BACKSPACE LC(BACKSPACE)
-&kp LCTRL  &hml LCTRL NUMBER_4  &hml LEFT_WIN N5  &hml LEFT_ALT NUMBER_6  &hml_shft LEFT_SHIFT F  &none                                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp SEMICOLON  &hmr RCTRL SINGLE_QUOTE  &kp RET
-&trans     &kp NUMBER_1         &kp NUMBER_2      &kp NUMBER_3            &kp V                   &none      &dblTap_toL0    &kp RBKT         &none           &msc SCRL_DOWN  &kp COMMA        &kp PERIOD     &kp SLASH                &kp RIGHT_ARROW
-                                                  &trans                  &trans                  &mo 2      &kp SPACE       &layer_toggle 0  &none           &trans          &trans
+&none  &dblTap_             &none             &none                   &none                   &none                                       &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &dblTap_pgup   &dblTap_pgdn             &LongPress_gen DELETE LC(DELETE)
+&none  &kp N7               &kp N8            &kp N9                  &kp N0                  &mkp LCLK                                   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp MINUS      &kp EQUAL                &LongPress_gen BACKSPACE LC(BACKSPACE)
+&none  &hml LCTRL NUMBER_4  &hml LEFT_WIN N5  &hml LEFT_ALT NUMBER_6  &hml_shft LEFT_SHIFT F  &none                                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp SEMICOLON  &hmr RCTRL SINGLE_QUOTE  &kp RET
+&none  &kp NUMBER_1         &kp NUMBER_2      &kp NUMBER_3            &none                   &none      &dblTap_toL0    &kp RBKT         &none           &msc SCRL_DOWN  &kp COMMA        &kp PERIOD     &kp SLASH                &kp RIGHT_ARROW
+                                              &none                   &none                   &mo 2      &kp SPACE       &layer_toggle 0  &none           &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        lower_layer {
+        L2 {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -181,7 +181,7 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Lower";
+            display-name = "L2";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
