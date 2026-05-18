@@ -1,6 +1,2 @@
-name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+build_matrix_path: "config/build.yaml"   # Should say "config/build.yaml"
+config_path: "config"                     # Should say "config"
