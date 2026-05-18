@@ -163,11 +163,11 @@
         layer_1 {
             display-name = "L1";
             bindings = <
-&none  &dblTap_             &none             &none                   &none                   &none                                       &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &dblTap_pgup   &dblTap_pgdn             &LongPress_gen DELETE LC(DELETE)
-&none  &kp N7               &kp N8            &kp N9                  &kp N0                  &mkp LCLK                                   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp MINUS      &kp EQUAL                &LongPress_gen BACKSPACE LC(BACKSPACE)
-&none  &hml LCTRL NUMBER_4  &hml LEFT_WIN N5  &hml LEFT_ALT NUMBER_6  &hml_shft LEFT_SHIFT F  &none                                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp SEMICOLON  &hmr RCTRL SINGLE_QUOTE  &kp RET
-&none  &kp NUMBER_1         &kp NUMBER_2      &kp NUMBER_3            &none                   &none      &dblTap_toL0    &kp RBKT         &none           &msc SCRL_DOWN  &kp COMMA        &kp PERIOD     &kp SLASH                &kp RIGHT_ARROW
-                                              &none                   &none                   &mo 2      &kp SPACE       &layer_toggle 0  &none           &none           &none
+&none  &dblTap_             &none             &none                   &none                   &none                                &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &dblTap_pgup   &dblTap_pgdn             &LongPress_gen DELETE LC(DELETE)
+&none  &kp N7               &kp N8            &kp N9                  &kp N0                  &mkp LCLK                            &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp MINUS      &kp EQUAL                &LongPress_gen BACKSPACE LC(BACKSPACE)
+&none  &hml LCTRL NUMBER_4  &hml LEFT_WIN N5  &hml LEFT_ALT NUMBER_6  &hml_shft LEFT_SHIFT F  &none                                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp SEMICOLON  &hmr RCTRL SINGLE_QUOTE  &kp RET
+&none  &kp NUMBER_1         &kp NUMBER_2      &kp NUMBER_3            &none                   &none      &dblTap_toL0    &kp RBKT  &none           &msc SCRL_DOWN  &kp COMMA        &kp PERIOD     &kp SLASH                &kp RIGHT_ARROW
+                                              &none                   &none                   &mo 2      &kp SPACE       &to 0     &none           &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -193,7 +193,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raise_layer {
+        Bluetooth {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -201,7 +201,7 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Raise";
+            display-name = "Blue";
             bindings = <
 &trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
 &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
